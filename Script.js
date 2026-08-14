@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const links = document.querySelectorAll('a[href^="#"]');
+    /*
+     * Small interaction for contact links.
+     * The page is intentionally lightweight because
+     * the main goal is a professional static portfolio.
+     */
 
-    links.forEach(link => {
+    const links = document.querySelectorAll("a[href]");
 
-        link.addEventListener("click", function (event) {
+    links.forEach((link) => {
 
-            const target = document.querySelector(
-                this.getAttribute("href")
-            );
+        link.addEventListener("click", () => {
 
-            if (target) {
-                event.preventDefault();
+            link.style.opacity = "0.7";
 
-                target.scrollIntoView({
-                    behavior: "smooth"
-                });
-            }
+            setTimeout(() => {
+                link.style.opacity = "";
+            }, 250);
 
         });
 
