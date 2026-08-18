@@ -54,17 +54,16 @@ a {
 ========================================================= */
 
 .cv {
-    width: min(100%, var(--page-width));
-
+    width: 100%;
+    max-width: 1200px;
     min-height: 100vh;
 
     margin: 0 auto;
 
     display: grid;
+    grid-template-columns: 315px minmax(0, 1fr);
 
-    grid-template-columns: 315px 1fr;
-
-    background: var(--white);
+    background: #ffffff;
 
     box-shadow:
         0 0 40px rgba(0, 0, 0, 0.12);
